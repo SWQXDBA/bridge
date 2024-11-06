@@ -14,7 +14,7 @@ object BridgeGlobalConfig {
     var propertyTypeConverter: PropertyTypeConverter? = null
 
     @JvmStatic
-    //属性类型转换器
+    //属性名称转换器
     var propertyNameConverter: PropertyNameConverter? = null
 
     @JvmStatic
@@ -25,7 +25,11 @@ object BridgeGlobalConfig {
     //属性类型转换器
     var methodReturnTypeConverter: MethodReturnTypeConverter? = null
 
-
+    /**
+     * 是否启用详细日志 启用后可能会降低性能
+     */
+    @JvmStatic
+    var enableDetailLog: Boolean = false
 
 
 }
@@ -40,18 +44,18 @@ interface PropertyTypeConverter {
      * @param getter 属性的getter方法
      * @param ownerClass 属性所在的类
      */
-    fun convert(propertyType: Type,getter: Method,ownerClass:Class<*>): Type
+    fun convert(propertyType: Type, getter: Method, ownerClass: Class<*>): Type
 }
 
 /**
  * 属性名称转换器 比如需要根据一些注解信息来重命名属性 如JsonProperty
  */
-interface PropertyNameConverter{
+interface PropertyNameConverter {
     /**
      * @param propertyName 属性的名称
      * @param ownerClass 属性所在的类
      */
-    fun convert(propertyName:String,ownerClass:Class<*>): String
+    fun convert(propertyName: String, ownerClass: Class<*>): String
 }
 
 /**
@@ -63,6 +67,7 @@ interface MethodParamTypeConverter {
      */
     fun convert(param: Parameter): Type
 }
+
 /**
  * 属性类型转换器 用于对方法返回值类型进行转换
  */
@@ -72,5 +77,5 @@ interface MethodReturnTypeConverter {
      * @param method 属性的getter方法
      * @param ownerClass 属性所在的类
      */
-    fun convert(returnType: Type,method: Method,ownerClass:Class<*>): Type
+    fun convert(returnType: Type, method: Method, ownerClass: Class<*>): Type
 }

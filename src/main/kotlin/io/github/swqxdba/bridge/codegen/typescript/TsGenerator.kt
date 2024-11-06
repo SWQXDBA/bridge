@@ -5,6 +5,7 @@ import freemarker.template.Configuration
 import freemarker.template.Template
 import io.github.swqxdba.bridge.codegen.IGenerator
 import io.github.swqxdba.bridge.codegen.typescript.meta.TsApiMeta
+import io.github.swqxdba.bridge.meta.BridgeGlobalConfig
 import io.github.swqxdba.bridge.meta.ControllerMeta
 import org.apache.logging.log4j.LogManager
 import org.springframework.core.io.ClassPathResource
@@ -18,7 +19,6 @@ class TsGenerator : IGenerator {
 
 
     val logger = LogManager.getLogger(TsGenerator::class.java)
-
 
 
     var basePath = "gens/"
@@ -63,14 +63,18 @@ class TsGenerator : IGenerator {
             logger.info("gen apis...")
             genApis(tsApiMetaList)
         }
-        logger.info("generate end!")
 
+
+        logger.info("generate end!")
     }
 
     val generatedTypes = mutableSetOf<String>()
     private fun genOne(meta: TsApiMeta) {
         if (genApi) {
-            logger.info("gen api => ${meta.clientClassName}")
+            if (BridgeGlobalConfig.enableDetailLog) {
+                logger.info("gen api => ${meta.clientClassName}")
+            }
+
             val template = getTemplate("Api.ftl")
             val dir = basePath + File.separator + apiDirName
             if (!Files.exists(Paths.get(dir))) {
@@ -89,7 +93,10 @@ class TsGenerator : IGenerator {
 
             for (type in types) {
 
-                logger.info("try gen for+++${type.typeString}")
+                if (BridgeGlobalConfig.enableDetailLog) {
+                    logger.info("try gen for+++${type.typeString}")
+                }
+
 
                 val defineType = type
                 val typeRowString = defineType.typeRowString
@@ -98,11 +105,17 @@ class TsGenerator : IGenerator {
                     continue
                 }
                 if (generatedTypes.contains(typeRowString)) {
-                    logger.info("jump generated type for ${typeRowString}")
+                    if (BridgeGlobalConfig.enableDetailLog) {
+                        logger.info("jump generated type for ${typeRowString}")
+                    }
+
                     continue
                 }
                 generatedTypes.add(typeRowString)
-                logger.info("gen type => ${typeRowString}")
+                if (BridgeGlobalConfig.enableDetailLog) {
+                    logger.info("gen type => ${typeRowString}")
+                }
+
 
                 val filePath = dir + File.separator + typeRowString + ".ts"
                 writeToFileIfNeed(template, filePath, defineType)
@@ -133,7 +146,8 @@ class TsGenerator : IGenerator {
         val filePath = basePath + File.separator + apiDirName + File.separator + "Apis.ts"
         writeToFileIfNeed(template, filePath, Apis(controllerMeta))
     }
-    private fun getHttpClient(){
+
+    private fun getHttpClient() {
 
     }
 

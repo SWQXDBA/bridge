@@ -5,7 +5,6 @@ import io.github.swqxdba.bridge.docreader.DocReader
 import io.github.swqxdba.bridge.docreader.JavaDocReader
 import io.github.swqxdba.bridge.docreader.KotlinDocReader
 import org.apache.logging.log4j.LogManager
-import org.apache.logging.log4j.Logger
 import java.io.File
 import java.lang.Exception
 import java.lang.reflect.Field
@@ -14,7 +13,7 @@ import java.util.function.Predicate
 
 object CommentResolver {
 
-    val logger: Logger = LogManager.getLogger(CommentResolver::class.java)
+    val logger by lazy { LogManager.getLogger(CommentResolver::class.java) }
 
     //遍历源码时的文件缓存
     private val fileCache = mutableMapOf<String, File>()
@@ -77,7 +76,10 @@ object CommentResolver {
             val sourceCode = file.readText()
             comment.addAll(docReader.readClassDoc(sourceCode, className, controllerMeta.controllerClass))
             for (apiMeta in controllerMeta.apiList) {
-                logger.info("为${controllerMeta.controllerClass.typeName} 解析注释")
+                if(BridgeGlobalConfig.enableDetailLog){
+                    logger.info("为${controllerMeta.controllerClass.typeName} 解析注释")
+                }
+
                 apiMeta.controllerMethodName
                 apiMeta.comment.addAll(
                     docReader.readMethodDoc(
@@ -101,7 +103,7 @@ object CommentResolver {
 
     fun resolveCommentForType(typeInfo: TypeInfo) {
         BridgeGlobalConfig.sourceCodeDir ?: return
-        logger.info("为${typeInfo.javaType.typeName} 解析注释")
+
         val resolveRawType = BridgeUtil.resolveRawType(typeInfo.javaType) ?: return
         if (resolveRawType.isArray) {
             return
@@ -115,6 +117,14 @@ object CommentResolver {
         if (typeInfo.isSpecialSuperType()) {
             return
         }
+        val packageName = typeInfo.javaType.javaClass.`package`?.name
+        if(packageName==null ||packageName.startsWith("java.")){
+            return
+        }
+        if(BridgeGlobalConfig.enableDetailLog){
+            logger.info("为${typeInfo.javaType.typeName} 解析注释")
+        }
+
 
         //标记已经解析过
         typeInfo.commentResolved = true
@@ -165,9 +175,11 @@ object CommentResolver {
             )
         )
 
+        if(BridgeGlobalConfig.enableDetailLog){
+            logger.info("准备完成,开始为${typeInfo.javaType.typeName} 解析注释")
+        }
 
 
-        logger.info("准备完成,开始为${typeInfo.javaType.typeName} 解析注释")
 
         //给成员属性添加注释
         for (selfMember in typeInfo.selfMembers) {

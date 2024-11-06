@@ -4,10 +4,7 @@ import io.github.swqxdba.bridge.codegen.typescript.TsGenGlobalConfig
 import io.github.swqxdba.bridge.codegen.typescript.TsUtil
 import io.github.swqxdba.bridge.codegen.typescript.TypeScriptTypeConverter
 import io.github.swqxdba.bridge.docreader.DocHelper
-import io.github.swqxdba.bridge.meta.BridgeUtil
-import io.github.swqxdba.bridge.meta.ControllerMeta
-import io.github.swqxdba.bridge.meta.TypeHolder
-import io.github.swqxdba.bridge.meta.toTypeInfo
+import io.github.swqxdba.bridge.meta.*
 import org.apache.logging.log4j.LogManager
 import java.util.PriorityQueue
 
@@ -61,7 +58,9 @@ class TsApiMeta(
             }
         }
 
-        logger.info("deps for ${clientClassName} is ${result.joinToString { it.typeRowString!! }}")
+        if(BridgeGlobalConfig.enableDetailLog){
+            logger.info("deps for ${clientClassName} is ${result.joinToString { it.typeRowString!! }}")
+        }
         //去除忽略的类型 不需要作为参数传递的类型就不需要导入
         result.removeIf {
             it.toRawTypeInfo()?.let { rawType ->
@@ -77,7 +76,10 @@ class TsApiMeta(
     }
 
     init {
-        logger.info("init api meta for ${controllerMeta.controllerClass.name}")
+        if(BridgeGlobalConfig.enableDetailLog){
+            logger.info("init api meta for ${controllerMeta.controllerClass.name}")
+        }
+
 
         //添加注释
         comment = DocHelper.recoverComment(controllerMeta.comment)
@@ -117,9 +119,12 @@ class TsApiMeta(
 
 
 
-        types.forEach {
-            logger.info("find dependency type ${it.typeRowString} for api ${this.clientClassName}")
+        if(BridgeGlobalConfig.enableDetailLog){
+            types.forEach {
+                logger.info("find dependency type ${it.typeRowString} for api ${this.clientClassName}")
+            }
         }
+
 
 
         //构建方法信息

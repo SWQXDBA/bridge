@@ -1,12 +1,8 @@
 package io.github.swqxdba.bridge.meta
 
 import org.apache.logging.log4j.LogManager
-import org.springframework.core.io.Resource
-import org.springframework.core.io.support.PathMatchingResourcePatternResolver
-import org.springframework.core.type.classreading.SimpleMetadataReaderFactory
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.*
-import java.io.File
 import java.lang.Exception
 import java.lang.reflect.ParameterizedType
 import java.lang.reflect.Type
@@ -23,10 +19,7 @@ enum class NameKind {
 
 object BridgeUtil {
 
-    val logger = LogManager.getLogger(BridgeUtil::class.java)
-
-
-
+    val logger by lazy { LogManager.getLogger(BridgeUtil::class.java) }
 
 
     /**
@@ -35,8 +28,11 @@ object BridgeUtil {
     @JvmOverloads
     @JvmStatic
     fun scan(baseClass: Class<*>, predicate: Predicate<String>? = null): List<ControllerMeta> {
-        return findAllControllers(baseClass, predicate)
-            .map { resolve(it) }
+        val controllers = findAllControllers(baseClass, predicate)
+        logger.info("Resolve Controller Meta Start")
+        val result = controllers.map { resolve(it) }
+        logger.info("Resolve Controller Meta End")
+        return result
     }
 
     /**
@@ -45,30 +41,23 @@ object BridgeUtil {
     @JvmOverloads
     @JvmStatic
     fun findAllControllers(baseClass: Class<*>, predicate: Predicate<String>? = null): List<Class<*>> {
+        logger.info("FindAllControllers Start")
         val packageName = baseClass.`package`?.name ?: ""
         if (packageName.isEmpty()) {
             throw Exception("必须要在一个包中!")
         }
-        val basePath = packageName.replace(".", File.separator)
-        val pathMatchingResourcePatternResolver = PathMatchingResourcePatternResolver()
-
         val controllerClasses = mutableListOf<Class<*>>()
 
-        val resources: Array<Resource> = if (basePath.isEmpty()) {
-            pathMatchingResourcePatternResolver.getResources("classpath*:*.class")
-        } else {
-            pathMatchingResourcePatternResolver.getResources("classpath*:" + basePath + File.separator + "**" + File.separator + "*.class")
-        }
-        for (res in resources) {
 
-            // 先获取resource的元信息，然后获取class元信息，最后得到 class 全路径
-            val className = SimpleMetadataReaderFactory().getMetadataReader(res).classMetadata.className
+        for (className in PackageClassResolver.resolveClasses(packageName)) {
 
             try {
                 if (predicate != null && !predicate.test(className)) {
                     continue
                 }
-                logger.info("try resolve controller for class: $className")
+                if (BridgeGlobalConfig.enableDetailLog) {
+                    logger.info("try resolve controller for class: $className")
+                }
                 val clazz = Class.forName(className)
 
                 if (!isControllerClass(clazz) || clazz.isAnnotationPresent(ApiIgnore::class.java)) {
@@ -78,21 +67,21 @@ object BridgeUtil {
                 CommentResolver.resolveCommentForType(clazz.toTypeInfo())//注释解析
 
 
-
             } catch (e: ClassNotFoundException) {
                 // 处理类加载异常
-                logger.error("ClassNotFoundException!!!", e)
+                if (BridgeGlobalConfig.enableDetailLog) {
+                    logger.error("ClassNotFoundException!!!", e)
+                }
+
             }
         }
-
+        logger.info("FindAllControllers End")
         return controllerClasses
     }
 
     private fun isControllerClass(clazz: Class<*>): Boolean {
         return clazz.isAnnotationPresent(Controller::class.java) || clazz.isAnnotationPresent(RestController::class.java)
     }
-
-
 
 
     fun resolve(controller: Class<*>): ControllerMeta {
@@ -103,7 +92,7 @@ object BridgeUtil {
 
         val apiMetas = mutableListOf<ApiMeta>()
         for (declaredMethod in controller.declaredMethods) {
-            if(declaredMethod.isAnnotationPresent(ApiIgnore::class.java)){
+            if (declaredMethod.isAnnotationPresent(ApiIgnore::class.java)) {
                 continue
             }
             for (annotation in declaredMethod.annotations) {

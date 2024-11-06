@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="71144cef-c59e-4a13-bc86-71f6c7ef317d" name="更改" comment="init">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/meta/PackageClassResolver.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/codegen/typescript/TsGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/codegen/typescript/TsGenerator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/codegen/typescript/meta/TsApiMeta.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/codegen/typescript/meta/TsApiMeta.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/codegen/typescript/meta/TsTypeMeta.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/codegen/typescript/meta/TsTypeMeta.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/meta/BridgeGlobalConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/meta/BridgeGlobalConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/meta/BridgeUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/meta/BridgeUtil.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/meta/CommentResolver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/meta/CommentResolver.kt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+        <option value="Kotlin Annotation" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;SWQXDBA&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/SWQXDBA/bridge.git&quot;,
+    &quot;accountId&quot;: &quot;f1288f80-44bd-44b7-857d-e6e57480a4ac&quot;
+  }
+}</component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="tu3rea5c" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="C:\Users\SWQXDBA\.m2\repository" />
+        <option name="userSettingsFile" value="C:\Users\SWQXDBA\.m2\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2YYbT25DXMqosTmgehNNuMqbZOD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Kotlin.PackageClassResolverKt.executor": "Debug",
+    "Maven.bridge [clean].executor": "Run",
+    "Maven.bridge [deploy].executor": "Run",
+    "Maven.bridge [install].executor": "Run",
+    "Maven.bridge [package].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/SWQXDBA/IdeaProjects/bridge",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Facet",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "spring.configuration.checksum": "98ac6b4b086b5a2f47677b15e786d9ba",
+    "ts.external.directory.path": "C:\\Users\\SWQXDBA\\AppData\\Local\\JetBrains\\Toolbox\\apps\\IDEA-U\\ch-0\\232.10072.27\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\SWQXDBA\IdeaProjects\bridge\src\main\kotlin\com\bridge\codegen\typescript" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.bridge.codegen.typescript.meta" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn install" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Kotlin.PackageClassResolverKt">
+    <configuration name="JavaDocReaderKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.github.swqxdba.bridge.docreader.JavaDocReaderKt" />
+      <module name="bridge" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KotlinDocReaderKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.github.swqxdba.bridge.docreader.KotlinDocReaderKt" />
+      <module name="bridge" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.MainKt" />
+      <module name="bridge" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PackageClassResolverKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.github.swqxdba.bridge.meta.PackageClassResolverKt" />
+      <module name="bridge" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TsGeneratorKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.github.swqxdba.bridge.codegen.typescript.TsGeneratorKt" />
+      <module name="bridge" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.PackageClassResolverKt" />
+        <item itemvalue="Kotlin.JavaDocReaderKt" />
+        <item itemvalue="Kotlin.KotlinDocReaderKt" />
+        <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="Kotlin.TsGeneratorKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="71144cef-c59e-4a13-bc86-71f6c7ef317d" name="更改" comment="" />
+      <created>1700705464216</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700705464216</updated>
+      <workItem from="1700705465555" duration="1483000" />
+      <workItem from="1700706967260" duration="9324000" />
+      <workItem from="1700718126026" duration="953000" />
+      <workItem from="1700719258431" duration="813000" />
+      <workItem from="1700720086049" duration="248000" />
+      <workItem from="1700720349060" duration="833000" />
+      <workItem from="1700721196566" duration="11189000" />
+      <workItem from="1700737124827" duration="12000" />
+      <workItem from="1700789079375" duration="4802000" />
+      <workItem from="1700793919745" duration="1631000" />
+      <workItem from="1700796129146" duration="13904000" />
+      <workItem from="1700815684888" duration="2673000" />
+      <workItem from="1701004888396" duration="225000" />
+      <workItem from="1701103653234" duration="1242000" />
+      <workItem from="1701675453978" duration="647000" />
+      <workItem from="1701739565808" duration="2742000" />
+      <workItem from="1701826185550" duration="1869000" />
+      <workItem from="1701998106072" duration="1757000" />
+      <workItem from="1702003523431" duration="7179000" />
+      <workItem from="1702011868291" duration="1178000" />
+      <workItem from="1702118616086" duration="185000" />
+      <workItem from="1702257182399" duration="20000" />
+      <workItem from="1702260510320" duration="985000" />
+      <workItem from="1702291935732" duration="405000" />
+      <workItem from="1702292360673" duration="2164000" />
+      <workItem from="1702343084436" duration="702000" />
+      <workItem from="1702363877142" duration="82000" />
+      <workItem from="1702364004724" duration="1512000" />
+      <workItem from="1702376162280" duration="1556000" />
+      <workItem from="1702520335479" duration="13000" />
+      <workItem from="1702870099973" duration="820000" />
+      <workItem from="1702955063592" duration="252000" />
+      <workItem from="1702970274057" duration="1435000" />
+      <workItem from="1703034436037" duration="599000" />
+      <workItem from="1703139868792" duration="1169000" />
+      <workItem from="1703143563458" duration="225000" />
+      <workItem from="1703143806102" duration="603000" />
+      <workItem from="1703742096926" duration="2662000" />
+      <workItem from="1703813332961" duration="609000" />
+      <workItem from="1703817956681" duration="111000" />
+      <workItem from="1703818084141" duration="1267000" />
+      <workItem from="1705654935762" duration="265000" />
+      <workItem from="1705655217787" duration="51000" />
+      <workItem from="1705887646291" duration="633000" />
+      <workItem from="1705907718237" duration="96000" />
+      <workItem from="1705907830122" duration="1328000" />
+      <workItem from="1706181107252" duration="177000" />
+      <workItem from="1707568071449" duration="2046000" />
+      <workItem from="1707819787256" duration="27000" />
+      <workItem from="1708499768226" duration="366000" />
+      <workItem from="1708500155075" duration="333000" />
+      <workItem from="1709271040325" duration="1109000" />
+      <workItem from="1709277576731" duration="509000" />
+      <workItem from="1709282233373" duration="8000" />
+      <workItem from="1713320646211" duration="4016000" />
+      <workItem from="1713494157864" duration="403000" />
+      <workItem from="1713494575763" duration="366000" />
+      <workItem from="1713494958347" duration="2057000" />
+      <workItem from="1713855561432" duration="808000" />
+      <workItem from="1721889371021" duration="728000" />
+      <workItem from="1722564889986" duration="1829000" />
+      <workItem from="1722578828636" duration="1008000" />
+      <workItem from="1724384024636" duration="6194000" />
+      <workItem from="1724403241751" duration="817000" />
+      <workItem from="1724831128305" duration="620000" />
+      <workItem from="1726038437639" duration="1830000" />
+      <workItem from="1726127365803" duration="2007000" />
+      <workItem from="1729235499244" duration="1600000" />
+      <workItem from="1729237216929" duration="54000" />
+      <workItem from="1729237583237" duration="92000" />
+      <workItem from="1729579390717" duration="264000" />
+      <workItem from="1729596393717" duration="274000" />
+      <workItem from="1729596677845" duration="1033000" />
+      <workItem from="1729646470622" duration="1130000" />
+      <workItem from="1730113377601" duration="175000" />
+      <workItem from="1730360249671" duration="3321000" />
+      <workItem from="1730860004827" duration="4338000" />
+    </task>
+    <task id="LOCAL-00009" summary="泛型默认Any实参">
+      <option name="closed" value="true" />
+      <created>1700792862858</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1700792862858</updated>
+    </task>
+    <task id="LOCAL-00010" summary="any命名修复">
+      <option name="closed" value="true" />
+      <created>1700793036906</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1700793036906</updated>
+    </task>
+    <task id="LOCAL-00011" summary="void修复">
+      <option name="closed" value="true" />
+      <created>1700793242875</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1700793242875</updated>
+    </task>
+    <task id="LOCAL-00012" summary="继承支持">
+      <option name="closed" value="true" />
+      <created>1700796721038</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1700796721038</updated>
+    </task>
+    <task id="LOCAL-00013" summary="支持不转换成es6Map 改用{[key:string]:string}格式&#10;支持把linkedHashMap转换成元组数组格式">
+      <option name="closed" value="true" />
+      <created>1700797914057</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1700797914057</updated>
+    </task>
+    <task id="LOCAL-00014" summary="支持从源码中解析注释">
+      <option name="closed" value="true" />
+      <created>1700815001395</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1700815001395</updated>
+    </task>
+    <task id="LOCAL-00015" summary="正则转译修复 性能优化">
+      <option name="closed" value="true" />
+      <created>1700815733638</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1700815733638</updated>
+    </task>
+    <task id="LOCAL-00016" summary="正则转译修复">
+      <option name="closed" value="true" />
+      <created>1700816166633</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1700816166633</updated>
+    </task>
+    <task id="LOCAL-00017" summary="修复反复添加注释问题">
+      <option name="closed" value="true" />
+      <created>1700817316848</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1700817316848</updated>
+    </task>
+    <task id="LOCAL-00018" summary="修复反复添加注释问题">
+      <option name="closed" value="true" />
+      <created>1700817752054</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1700817752054</updated>
+    </task>
+    <task id="LOCAL-00019" summary="readonly support">
+      <option name="closed" value="true" />
+      <created>1701998352396</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1701998352396</updated>
+    </task>
+    <task id="LOCAL-00020" summary="泛型进一步支持">
+      <option name="closed" value="true" />
+      <created>1702009927059</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1702009927059</updated>
+    </task>
+    <task id="LOCAL-00021" summary="支持属性带初始值时的文档解析">
+      <option name="closed" value="true" />
+      <created>1702010982399</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1702010982399</updated>
+    </task>
+    <task id="LOCAL-00022" summary="属性类型转换器支持">
+      <option name="closed" value="true" />
+      <created>1702011703184</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1702011703184</updated>
+    </task>
+    <task id="LOCAL-00023" summary="属性类型转换器支持">
+      <option name="closed" value="true" />
+      <created>1702011821217</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1702011821217</updated>
+    </task>
+    <task id="LOCAL-00024" summary="void调整">
+      <option name="closed" value="true" />
+      <created>1702012352361</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1702012352361</updated>
+    </task>
+    <task id="LOCAL-00025" summary="void调整">
+      <option name="closed" value="true" />
+      <created>1702012439605</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1702012439605</updated>
+    </task>
+    <task id="LOCAL-00026" summary="调整kt版本到1.6">
+      <option name="closed" value="true" />
+      <created>1702260818906</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1702260818906</updated>
+    </task>
+    <task id="LOCAL-00027" summary="生成httpClient接口 private修饰成员">
+      <option name="closed" value="true" />
+      <created>1702293466298</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1702293466298</updated>
+    </task>
+    <task id="LOCAL-00028" summary="文档解析规则修改">
+      <option name="closed" value="true" />
+      <created>1702294320472</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1702294320472</updated>
+    </task>
+    <task id="LOCAL-00029" summary="WildcardType 初步支持">
+      <option name="closed" value="true" />
+      <created>1702364209426</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1702364209426</updated>
+    </task>
+    <task id="LOCAL-00030" summary="WildcardType 初步支持">
+      <option name="closed" value="true" />
+      <created>1702377139840</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1702377139841</updated>
+    </task>
+    <task id="LOCAL-00031" summary="字段 方法排序 保证结果有序稳定">
+      <option name="closed" value="true" />
+      <created>1702955278084</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1702955278084</updated>
+    </task>
+    <task id="LOCAL-00032" summary="字段 方法排序 保证结果有序稳定">
+      <option name="closed" value="true" />
+      <created>1702970451693</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1702970451693</updated>
+    </task>
+    <task id="LOCAL-00033" summary="字段 方法排序 保证结果有序稳定">
+      <option name="closed" value="true" />
+      <created>1702970811739</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1702970811739</updated>
+    </task>
+    <task id="LOCAL-00034" summary="支持produces">
+      <option name="closed" value="true" />
+      <created>1703744528954</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1703744528954</updated>
+    </task>
+    <task id="LOCAL-00035" summary="修复忽略参数类型问题">
+      <option name="closed" value="true" />
+      <created>1705655164797</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1705655164797</updated>
+    </task>
+    <task id="LOCAL-00036" summary="支持多行注解">
+      <option name="closed" value="true" />
+      <created>1705907792035</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1705907792035</updated>
+    </task>
+    <task id="LOCAL-00037" summary="支持多行注解">
+      <option name="closed" value="true" />
+      <created>1705908046216</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1705908046217</updated>
+    </task>
+    <task id="LOCAL-00038" summary="支持多行注解">
+      <option name="closed" value="true" />
+      <created>1705908551855</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1705908551855</updated>
+    </task>
+    <task id="LOCAL-00039" summary="更新注释">
+      <option name="closed" value="true" />
+      <created>1706181180905</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1706181180905</updated>
+    </task>
+    <task id="LOCAL-00040" summary="尝试支持kotlin代码注释">
+      <option name="closed" value="true" />
+      <created>1707570053406</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1707570053406</updated>
+    </task>
+    <task id="LOCAL-00041" summary="文件匹配更新">
+      <option name="closed" value="true" />
+      <created>1708500097569</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1708500097569</updated>
+    </task>
+    <task id="LOCAL-00042" summary="文件匹配更新">
+      <option name="closed" value="true" />
+      <created>1713321927617</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1713321927617</updated>
+    </task>
+    <task id="LOCAL-00043" summary="解析性能优化">
+      <option name="closed" value="true" />
+      <created>1713498189235</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1713498189235</updated>
+    </task>
+    <task id="LOCAL-00044" summary="ApiIgnore ApiComment支持 (还未测试)">
+      <option name="closed" value="true" />
+      <created>1724396929267</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1724396929267</updated>
+    </task>
+    <task id="LOCAL-00045" summary="ApiIgnore ApiComment支持 (还未测试)">
+      <option name="closed" value="true" />
+      <created>1724403396986</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1724403396986</updated>
+    </task>
+    <task id="LOCAL-00046" summary="ApiIgnore ApiComment支持 (还未测试)">
+      <option name="closed" value="true" />
+      <created>1724403558793</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1724403558793</updated>
+    </task>
+    <task id="LOCAL-00047" summary="ApiIgnore ApiComment支持 (还未测试)">
+      <option name="closed" value="true" />
+      <created>1724403986641</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1724403986641</updated>
+    </task>
+    <task id="LOCAL-00048" summary="属性名转换器">
+      <option name="closed" value="true" />
+      <created>1726127748315</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1726127748315</updated>
+    </task>
+    <task id="LOCAL-00049" summary="属性名转换器">
+      <option name="closed" value="true" />
+      <created>1729236191448</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1729236191448</updated>
+    </task>
+    <task id="LOCAL-00050" summary="优化格式">
+      <option name="closed" value="true" />
+      <created>1729237053947</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1729237053947</updated>
+    </task>
+    <task id="LOCAL-00051" summary="修改包名">
+      <option name="closed" value="true" />
+      <created>1729579611153</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1729579611153</updated>
+    </task>
+    <task id="LOCAL-00052" summary="fix bug">
+      <option name="closed" value="true" />
+      <created>1729596507333</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1729596507333</updated>
+    </task>
+    <task id="LOCAL-00053" summary="fix bug">
+      <option name="closed" value="true" />
+      <created>1729596783914</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1729596783914</updated>
+    </task>
+    <task id="LOCAL-00054" summary="fix bug">
+      <option name="closed" value="true" />
+      <created>1730113444036</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1730113444036</updated>
+    </task>
+    <task id="LOCAL-00055" summary="init">
+      <option name="closed" value="true" />
+      <created>1730361001913</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1730361001914</updated>
+    </task>
+    <task id="LOCAL-00056" summary="init">
+      <option name="closed" value="true" />
+      <created>1730361157135</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1730361157136</updated>
+    </task>
+    <task id="LOCAL-00057" summary="init">
+      <option name="closed" value="true" />
+      <created>1730361433568</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1730361433569</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="正则转译修复" />
+    <MESSAGE value="修复反复添加注释问题" />
+    <MESSAGE value="readonly support" />
+    <MESSAGE value="泛型进一步支持" />
+    <MESSAGE value="支持属性带初始值时的文档解析" />
+    <MESSAGE value="属性类型转换器支持" />
+    <MESSAGE value="void调整" />
+    <MESSAGE value="调整kt版本到1.6" />
+    <MESSAGE value="生成httpClient接口 private修饰成员" />
+    <MESSAGE value="文档解析规则修改" />
+    <MESSAGE value="WildcardType 初步支持" />
+    <MESSAGE value="字段 方法排序 保证结果有序稳定" />
+    <MESSAGE value="支持produces" />
+    <MESSAGE value="修复忽略参数类型问题" />
+    <MESSAGE value="支持多行注解" />
+    <MESSAGE value="更新注释" />
+    <MESSAGE value="尝试支持kotlin代码注释" />
+    <MESSAGE value="文件匹配更新" />
+    <MESSAGE value="解析性能优化" />
+    <MESSAGE value="ApiIgnore ApiComment支持 (还未测试)" />
+    <MESSAGE value="属性名转换器" />
+    <MESSAGE value="优化格式" />
+    <MESSAGE value="修改包名" />
+    <MESSAGE value="fix bug" />
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
+  </component>
+</project>

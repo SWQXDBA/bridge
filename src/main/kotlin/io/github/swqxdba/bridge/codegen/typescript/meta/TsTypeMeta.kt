@@ -4,11 +4,8 @@ import io.github.swqxdba.bridge.codegen.typescript.TsGenGlobalConfig
 import io.github.swqxdba.bridge.codegen.typescript.TsUtil
 import io.github.swqxdba.bridge.codegen.typescript.TypeScriptTypeConverter
 import io.github.swqxdba.bridge.docreader.DocHelper
-import io.github.swqxdba.bridge.meta.BridgeUtil
-import io.github.swqxdba.bridge.meta.TypeHolder
-import io.github.swqxdba.bridge.meta.TypeInfo
+import io.github.swqxdba.bridge.meta.*
 import io.github.swqxdba.bridge.meta.basicTypes.Types
-import io.github.swqxdba.bridge.meta.toTypeInfo
 import org.apache.logging.log4j.LogManager
 import java.lang.reflect.Type
 import java.lang.reflect.TypeVariable
@@ -190,9 +187,12 @@ data class TsTypeMeta private constructor(var typeInfo: TypeInfo) : Comparable<T
             create(it.toTypeInfo())
         })
 
-        for (type in types) {
-            logger.info("find dependency property type of ${type.typeString} for ${this.typeString}")
+        if(BridgeGlobalConfig.enableDetailLog){
+            for (type in types) {
+                logger.info("find dependency property type of ${type.typeString} for ${this.typeString}")
+            }
         }
+
 
         //移除自身
         needImportTypes.removeIf {
