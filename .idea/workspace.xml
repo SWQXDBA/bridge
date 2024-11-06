@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71144cef-c59e-4a13-bc86-71f6c7ef317d" name="更改" comment="init">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/meta/PackageClassResolver.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/codegen/typescript/TsGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/codegen/typescript/TsGenerator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/codegen/typescript/meta/TsApiMeta.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/codegen/typescript/meta/TsApiMeta.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/codegen/typescript/meta/TsTypeMeta.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/codegen/typescript/meta/TsTypeMeta.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/meta/BridgeGlobalConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/meta/BridgeGlobalConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/meta/BridgeUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/meta/BridgeUtil.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/meta/CommentResolver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/meta/CommentResolver.kt" afterDir="false" />
-    </list>
+    <list default="true" id="71144cef-c59e-4a13-bc86-71f6c7ef317d" name="更改" comment="0.0.8&#10;修改扫描包下类的方式&#10;日志优化" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -251,15 +241,7 @@
       <workItem from="1729646470622" duration="1130000" />
       <workItem from="1730113377601" duration="175000" />
       <workItem from="1730360249671" duration="3321000" />
-      <workItem from="1730860004827" duration="4338000" />
-    </task>
-    <task id="LOCAL-00009" summary="泛型默认Any实参">
-      <option name="closed" value="true" />
-      <created>1700792862858</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1700792862858</updated>
+      <workItem from="1730860004827" duration="4674000" />
     </task>
     <task id="LOCAL-00010" summary="any命名修复">
       <option name="closed" value="true" />
@@ -645,7 +627,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730361433569</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="0.0.8&#10;修改扫描包下类的方式&#10;日志优化">
+      <option name="closed" value="true" />
+      <created>1730864909780</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1730864909780</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -680,7 +670,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="正则转译修复" />
     <MESSAGE value="修复反复添加注释问题" />
     <MESSAGE value="readonly support" />
     <MESSAGE value="泛型进一步支持" />
@@ -705,6 +694,7 @@
     <MESSAGE value="修改包名" />
     <MESSAGE value="fix bug" />
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="0.0.8&#10;修改扫描包下类的方式&#10;日志优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.0.8&#10;修改扫描包下类的方式&#10;日志优化" />
   </component>
 </project>
