@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71144cef-c59e-4a13-bc86-71f6c7ef317d" name="更改" comment="0.0.8&#10;修改扫描包下类的方式&#10;日志优化" />
+    <list default="true" id="71144cef-c59e-4a13-bc86-71f6c7ef317d" name="更改" comment="0.0.8&#10;修改扫描包下类的方式&#10;日志优化">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +43,10 @@
     &quot;accountId&quot;: &quot;f1288f80-44bd-44b7-857d-e6e57480a4ac&quot;
   }
 }</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="tu3rea5c" />
   </component>
@@ -62,34 +69,34 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Kotlin.PackageClassResolverKt.executor": "Debug",
-    "Maven.bridge [clean].executor": "Run",
-    "Maven.bridge [deploy].executor": "Run",
-    "Maven.bridge [install].executor": "Run",
-    "Maven.bridge [package].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/SWQXDBA/IdeaProjects/bridge",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Facet",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "spring.configuration.checksum": "98ac6b4b086b5a2f47677b15e786d9ba",
-    "ts.external.directory.path": "C:\\Users\\SWQXDBA\\AppData\\Local\\JetBrains\\Toolbox\\apps\\IDEA-U\\ch-0\\232.10072.27\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Kotlin.PackageClassResolverKt.executor&quot;: &quot;Debug&quot;,
+    &quot;Maven.bridge [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.bridge [deploy].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.bridge [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.bridge [package].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/SWQXDBA/IdeaProjects/bridge&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Facet&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;98ac6b4b086b5a2f47677b15e786d9ba&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\SWQXDBA\\AppData\\Local\\JetBrains\\Toolbox\\apps\\IDEA-U\\ch-0\\232.10072.27\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\SWQXDBA\IdeaProjects\bridge\src\main\kotlin\com\bridge\codegen\typescript" />
@@ -241,15 +248,9 @@
       <workItem from="1729646470622" duration="1130000" />
       <workItem from="1730113377601" duration="175000" />
       <workItem from="1730360249671" duration="3321000" />
-      <workItem from="1730860004827" duration="4674000" />
-    </task>
-    <task id="LOCAL-00010" summary="any命名修复">
-      <option name="closed" value="true" />
-      <created>1700793036906</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1700793036906</updated>
+      <workItem from="1730860004827" duration="5766000" />
+      <workItem from="1730868193218" duration="1894000" />
+      <workItem from="1730876687088" duration="2612000" />
     </task>
     <task id="LOCAL-00011" summary="void修复">
       <option name="closed" value="true" />
@@ -635,7 +636,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730864909780</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="0.0.8&#10;修改扫描包下类的方式&#10;日志优化">
+      <option name="closed" value="true" />
+      <created>1730865158876</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1730865158876</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
