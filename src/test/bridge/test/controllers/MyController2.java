@@ -1,4 +1,4 @@
-package io.github.swqxdba.bridge.controllers;
+package bridge.test.controllers;
 
 import org.springframework.web.bind.annotation.*;
 

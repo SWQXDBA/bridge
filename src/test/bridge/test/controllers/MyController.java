@@ -1,4 +1,4 @@
-package io.github.swqxdba.bridge.controllers;
+package bridge.test.controllers;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -9,11 +9,12 @@ import java.util.Map;
 //测试controller
 @RestController
 @RequestMapping("test")
-public class MyController{
+public class MyController extends BaseController{
 
 
 
 
+    /// 666
     @GetMapping("users")
     List<Long> getUser( List<Long> idList){
         return null;

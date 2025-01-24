@@ -2,6 +2,7 @@ package io.github.swqxdba.bridge.meta
 
 import org.apache.logging.log4j.LogManager
 import org.springframework.stereotype.Controller
+import org.springframework.util.ReflectionUtils
 import org.springframework.web.bind.annotation.*
 import java.lang.Exception
 import java.lang.reflect.ParameterizedType
@@ -91,7 +92,7 @@ object BridgeUtil {
         val controllerPath: Array<String> = requestMappingOnController?.value ?: emptyArray()
 
         val apiMetas = mutableListOf<ApiMeta>()
-        for (declaredMethod in controller.declaredMethods) {
+        for (declaredMethod in ReflectionUtils.getAllDeclaredMethods(controller)) {
             if (declaredMethod.isAnnotationPresent(ApiIgnore::class.java)) {
                 continue
             }

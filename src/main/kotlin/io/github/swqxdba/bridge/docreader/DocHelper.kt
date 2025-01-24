@@ -6,8 +6,8 @@ object DocHelper {
     fun getStartEndStringBlock(srcContent: String, startStr: String, endStr: String, index: Int = 0): String? {
         val src: String = srcContent.substring(index)
         var starCount = 0
-        var startIndex: Int? = null;
-        var endIndex: Int? = null;
+        var startIndex: Int? = null
+        var endIndex: Int? = null
         for ((index, c) in src.withIndex()) {
             if (subStartWith(src, index, startStr)) {
                 if (startIndex == null) {
@@ -145,49 +145,50 @@ object DocHelper {
 
     //读取上一个注释 比如在代码行上方的注释
     fun lookUpPrevDoc(sourceCode: String, codeLineIndex: Int): List<String>? {
-        var prevLineStartIndex = DocHelper.prevLineStart(sourceCode, codeLineIndex)
-        var prevLine = DocHelper.readLine(sourceCode, prevLineStartIndex)
+        var prevLineStartIndex = prevLineStart(sourceCode, codeLineIndex)
+        var prevLine = readLine(sourceCode, prevLineStartIndex)
 
         //如果上一行是注解则跳过 跳过空行 其他语言可能不要跳过注解等等 这里先写死
         while ( prevLine.trim().startsWith("@")||
             //注解可能跨越多行 这里支持第二行结束的情况
             (prevLine.trim().endsWith(")") &&!maybeDocLine(prevLine)) ||
             prevLine.trim().isEmpty()) {
-            prevLineStartIndex = DocHelper.prevLineStart(sourceCode, prevLineStartIndex)
-            prevLine = DocHelper.readLine(sourceCode, prevLineStartIndex)
+            prevLineStartIndex = prevLineStart(sourceCode, prevLineStartIndex)
+            prevLine = readLine(sourceCode, prevLineStartIndex)
         }
 
-        if (!DocHelper.maybeDocLine(prevLine)) {
+        if (!maybeDocLine(prevLine)) {
             return null
         }
 
         val docLines = mutableListOf<String>()
-        while (DocHelper.maybeDocLine(prevLine) || prevLine.isEmpty()) {
+        while (maybeDocLine(prevLine) || prevLine.isEmpty()) {
             if (prevLine.isNotEmpty()) {
                 docLines.add(prevLine)
             }
 
-            prevLineStartIndex = DocHelper.prevLineStart(sourceCode, prevLineStartIndex)
-            prevLine = DocHelper.readLine(sourceCode, prevLineStartIndex)
+            prevLineStartIndex = prevLineStart(sourceCode, prevLineStartIndex)
+            prevLine = readLine(sourceCode, prevLineStartIndex)
         }
         docLines.reverse()
 
-        return DocHelper.deleteDocSymbol(docLines)
+        return deleteDocSymbol(docLines)
     }
 
     //读取同一行的注释
     fun lookUpSameLineDoc(sourceCode: String, codeLineIndex: Int): String? {
-        val line = DocHelper.readLine(sourceCode, codeLineIndex)
-        if (!DocHelper.haveDocSymbol(line)) {
+        val line = readLine(sourceCode, codeLineIndex)
+        if (!haveDocSymbol(line)) {
             return null
         }
+
         val pattern = "(//|/\\*|\\*/|\\*)"
         val regex = Regex(pattern)
         //匹配 注释后的内容
         val matchResult = regex.find(line) ?: return null
         val start = line.indexOf(matchResult.value)
 
-        return DocHelper.deleteDocSymbol(listOf(line.substring(start)))[0]
+        return deleteDocSymbol(listOf(line.substring(start)))[0]
     }
 
     //还原注释
@@ -219,7 +220,7 @@ object DocHelper {
     fun findPatternLineStart(sourceCode:String,pattern: String):Int?{
         val regex = Regex(pattern)
         val matchResult = regex.find(sourceCode) ?: return null
-        return DocHelper.findLineStartIndex(sourceCode, matchResult.range.first)
+        return findLineStartIndex(sourceCode, matchResult.range.first)
     }
 }
 

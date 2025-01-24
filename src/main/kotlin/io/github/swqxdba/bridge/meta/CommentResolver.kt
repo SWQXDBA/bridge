@@ -69,35 +69,42 @@ object CommentResolver {
 
         val file = findFile {
             it == "$className.java" || it == "$className.kt"
-        }
+        } ?: return
 
-        if (file != null) {
-            val docReader = docReaderOf(file.name)
-            val sourceCode = file.readText()
-            comment.addAll(docReader.readClassDoc(sourceCode, className, controllerMeta.controllerClass))
-            for (apiMeta in controllerMeta.apiList) {
-                if(BridgeGlobalConfig.enableDetailLog){
-                    logger.info("为${controllerMeta.controllerClass.typeName} 解析注释")
-                }
 
-                apiMeta.controllerMethodName
+        val docReader = docReaderOf(file.name)
+        val sourceCode = file.readText()
+        comment.addAll(docReader.readClassDoc(sourceCode, className, controllerMeta.controllerClass))
+        for (apiMeta in controllerMeta.apiList) {
+            if (BridgeGlobalConfig.enableDetailLog) {
+                logger.info("为${controllerMeta.controllerClass.typeName} 解析注释")
+            }
+            val declaringClass = apiMeta.method.declaringClass
+            val declaringClassName = declaringClass.simpleName
+            val methodFile =  findFile {
+                it == "$declaringClassName.java" || it == "$declaringClassName.kt"
+            }
+            if(methodFile!=null){
                 apiMeta.comment.addAll(
                     docReader.readMethodDoc(
-                        sourceCode,
-                        className,
+                        methodFile.readText(),
+                        declaringClassName,
                         apiMeta.controllerMethodName,
                         apiMeta.method
                     )
                 )
-                for (param in apiMeta.params) {
-                    val typeInfo = param.paramType
-                    resolveCommentForType(typeInfo)
-                    typeInfo.toRawType()?.let { resolveCommentForType(it) }
-                }
-                resolveCommentForType(apiMeta.returnType)
-                apiMeta.returnType.toRawType()?.let { resolveCommentForType(it) }
             }
+
+
+            for (param in apiMeta.params) {
+                val typeInfo = param.paramType
+                resolveCommentForType(typeInfo)
+                typeInfo.toRawType()?.let { resolveCommentForType(it) }
+            }
+            resolveCommentForType(apiMeta.returnType)
+            apiMeta.returnType.toRawType()?.let { resolveCommentForType(it) }
         }
+
 
     }
 
@@ -118,10 +125,10 @@ object CommentResolver {
             return
         }
         val packageName = typeInfo.javaType.javaClass.`package`?.name
-        if(packageName==null ||packageName.startsWith("java.")){
+        if (packageName == null || packageName.startsWith("java.")) {
             return
         }
-        if(BridgeGlobalConfig.enableDetailLog){
+        if (BridgeGlobalConfig.enableDetailLog) {
             logger.info("为${typeInfo.javaType.typeName} 解析注释")
         }
 
@@ -175,10 +182,9 @@ object CommentResolver {
             )
         )
 
-        if(BridgeGlobalConfig.enableDetailLog){
+        if (BridgeGlobalConfig.enableDetailLog) {
             logger.info("准备完成,开始为${typeInfo.javaType.typeName} 解析注释")
         }
-
 
 
         //给成员属性添加注释
@@ -202,7 +208,7 @@ object CommentResolver {
                         selfMember.key,
                         fieldTypName,
                         field
-                        )
+                    )
                 )
 
                 //解析getter方法上的注释

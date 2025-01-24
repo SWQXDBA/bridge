@@ -46,7 +46,7 @@ class TsGenerator : IGenerator {
 
     override fun generate(controllerMeta: List<ControllerMeta>) {
         if (!Files.exists(Paths.get(basePath))) {
-            Files.createDirectory(Paths.get(basePath))
+            Files.createDirectories(Paths.get(basePath))
         }
         if (cleanBasePath) {
             Files.walk(Paths.get(basePath))
