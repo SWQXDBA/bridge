@@ -17,7 +17,7 @@ Maven 引入依赖
 <dependency>
    <groupId>io.github.swqxdba</groupId>
    <artifactId>bridge</artifactId>
-   <version>0.0.8</version>
+   <version>0.0.9</version>
 </dependency>
 
 ```
