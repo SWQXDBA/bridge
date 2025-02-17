@@ -1,5 +1,6 @@
 package io.github.swqxdba.bridge.codegen.typescript.meta
 
+import io.github.swqxdba.bridge.codegen.typescript.EnumConstant
 import io.github.swqxdba.bridge.codegen.typescript.TsGenGlobalConfig
 import io.github.swqxdba.bridge.codegen.typescript.TsUtil
 import io.github.swqxdba.bridge.codegen.typescript.TypeScriptTypeConverter
@@ -54,6 +55,8 @@ data class TsTypeMeta private constructor(var typeInfo: TypeInfo) : Comparable<T
 
     //枚举类型的成员
     var enumMemberLines: MutableList<String> = mutableListOf()
+
+    var enumConstants:MutableList<EnumConstant> = mutableListOf()
 
     //扩展类型字符串 如 "extends Base"
     var extendStr: String = ""
@@ -142,6 +145,11 @@ data class TsTypeMeta private constructor(var typeInfo: TypeInfo) : Comparable<T
                         "${it.key} = ${it.value}"
                     }
                 }.toMutableList()
+                val generators = TsGenGlobalConfig.enumConstantsGeneratorProvider?.getGenerators(javaType)?: emptyList()
+                val constants = generators.flatMap { it.getConstants(javaType) }
+                enumConstants.addAll(constants)
+
+
             }
         }
     }

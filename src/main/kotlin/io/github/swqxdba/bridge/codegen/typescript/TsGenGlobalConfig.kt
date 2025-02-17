@@ -8,6 +8,9 @@ class TsGenGlobalConfig {
         @JvmStatic
         var enumConvert: EnumTypeConverter = EnumTypeConverter.NameStringConverter
 
+        @JvmStatic
+        var enumConstantsGeneratorProvider:EnumConstantsGeneratorProvider?= null
+
         /**
          * 解析方法参数时要忽略的类型 如ServletRequest 这种类型本身也可能不会被解析
          */

@@ -37,6 +37,7 @@ class TsGenerator : IGenerator {
 
     var apiDirName = "api"
 
+
     //在各个api中导入所需类型的路径前缀 后面会拼接上typeDirName+"/"+{类型名}
     //比如 apiImportTypePrefix + typeDirName+"/" +"Response"
     var apiImportTypePrefix = "../"

@@ -19,3 +19,6 @@ ${member.comment}
 
 
 }
+<#list enumConstants as constants>
+export const ${constants.name} = ${constants.content}
+</#list>
