@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71144cef-c59e-4a13-bc86-71f6c7ef317d" name="更改" comment="0.0.9">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/codegen/typescript/EnumConstant.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/codegen/typescript/EnumConstantsGenerator.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/codegen/typescript/EnumConstantsGeneratorProvider.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/bridge/test/controllers/DemoEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/bridge/test/controllers/EnumTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/codegen/typescript/TsGenGlobalConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/codegen/typescript/TsGenGlobalConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/codegen/typescript/TsGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/codegen/typescript/TsGenerator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/codegen/typescript/meta/TsTypeMeta.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/io/github/swqxdba/bridge/codegen/typescript/meta/TsTypeMeta.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ts/code/Type.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ts/code/Type.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/bridge/test/controllers/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/bridge/test/controllers/BaseController.java" afterDir="false" />
+    <list default="true" id="71144cef-c59e-4a13-bc86-71f6c7ef317d" name="更改" comment="support enum constants">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -293,15 +283,7 @@
       <workItem from="1737791294175" duration="1534000" />
       <workItem from="1737794696270" duration="507000" />
       <workItem from="1738650078690" duration="219000" />
-      <workItem from="1739762473332" duration="4435000" />
-    </task>
-    <task id="LOCAL-00014" summary="支持从源码中解析注释">
-      <option name="closed" value="true" />
-      <created>1700815001395</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1700815001395</updated>
+      <workItem from="1739762473332" duration="4469000" />
     </task>
     <task id="LOCAL-00015" summary="正则转译修复 性能优化">
       <option name="closed" value="true" />
@@ -687,7 +669,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737688798399</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="support enum constants">
+      <option name="closed" value="true" />
+      <created>1739774059254</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1739774059254</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -722,7 +712,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="支持属性带初始值时的文档解析" />
     <MESSAGE value="属性类型转换器支持" />
     <MESSAGE value="void调整" />
     <MESSAGE value="调整kt版本到1.6" />
@@ -747,7 +736,8 @@
     <MESSAGE value="README.md" />
     <MESSAGE value="支持super中的注释" />
     <MESSAGE value="0.0.9" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.0.9" />
+    <MESSAGE value="support enum constants" />
+    <option name="LAST_COMMIT_MESSAGE" value="support enum constants" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

@@ -6,7 +6,7 @@
 
     <artifactId>bridge</artifactId>
     <groupId>io.github.swqxdba</groupId>
-    <version>0.0.9</version>
+    <version>0.1.0</version>
     <packaging>jar</packaging>
     <url>https://github.com/SWQXDBA/bridge/tree/master</url>
     <name>${project.groupId}:${project.artifactId}</name>

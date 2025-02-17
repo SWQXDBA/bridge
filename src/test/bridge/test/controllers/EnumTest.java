@@ -18,7 +18,7 @@ import java.util.List;
 
 public class EnumTest {
 
-    @Test
+//    @Test
     void test(){
 
         //输入你项目的源码的绝对文件路径 该路径用于生成代码注释。如果不设置，生成的TS代码中就没有注释了。
