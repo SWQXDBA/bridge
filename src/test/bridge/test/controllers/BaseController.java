@@ -34,6 +34,11 @@ public class BaseController {
         return new ArrayList<>();
     }
 
+    @RequestMapping("testRequestBody")
+    public List<DemoEnum> testRequestBody(@RequestBody Integer a ){
+        return new ArrayList<>();
+    }
+
 //    @GetMapping("gettestRequestBody")
 //    public List<DemoEnum> gettestRequestBody(@RequestBody String a ){
 //        return new ArrayList<>();

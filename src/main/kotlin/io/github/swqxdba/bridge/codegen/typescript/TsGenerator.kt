@@ -37,6 +37,7 @@ class TsGenerator : IGenerator {
 
     var apiDirName = "api"
 
+    var errorOnFunctionOverloading = false
 
     //在各个api中导入所需类型的路径前缀 后面会拼接上typeDirName+"/"+{类型名}
     //比如 apiImportTypePrefix + typeDirName+"/" +"Response"
@@ -49,6 +50,7 @@ class TsGenerator : IGenerator {
         if (!Files.exists(Paths.get(basePath))) {
             Files.createDirectories(Paths.get(basePath))
         }
+        checkMethods(controllerMeta)
         if (cleanBasePath) {
             Files.walk(Paths.get(basePath))
                 .sorted(Comparator.reverseOrder())
@@ -156,6 +158,19 @@ class TsGenerator : IGenerator {
         val cfg = Configuration()
         cfg.setClassForTemplateLoading(TsGenerator::class.java, "/templates/ts/code")
         return cfg.getTemplate(name)
+    }
+
+    fun checkMethods(controllerMeta: List<ControllerMeta>){
+        for (meta in controllerMeta) {
+            val group = meta.apiList.groupBy { it.controllerMethodName }
+            for (entry in group) {
+                if(entry.value.size>1){
+                    if (errorOnFunctionOverloading) {
+                        throw IllegalArgumentException("Function overloading detected for method: ${entry.key} in controller: ${meta.controllerClass}")
+                    }
+                }
+            }
+        }
     }
 
 }
