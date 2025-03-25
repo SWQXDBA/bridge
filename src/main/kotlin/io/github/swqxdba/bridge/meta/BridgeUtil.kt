@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller
 import org.springframework.util.ReflectionUtils
 import org.springframework.web.bind.annotation.*
 import java.lang.Exception
+import java.lang.reflect.Method
 import java.lang.reflect.ParameterizedType
 import java.lang.reflect.Type
 import java.lang.reflect.TypeVariable
@@ -97,6 +98,7 @@ object BridgeUtil {
                 continue
             }
             for (annotation in declaredMethod.annotations) {
+                var hasRequestBody = false
                 val requestMappingPair = tryGetMappingAnnotation(annotation) ?: continue
                 val httpMethod = requestMappingPair.second
                 val paths = requestMappingPair.first
@@ -125,6 +127,7 @@ object BridgeUtil {
                     }
                     val requestBody = it.getDeclaredAnnotation(RequestBody::class.java)
                     if (requestBody != null) {
+                        hasRequestBody = true
                         contentType = "application/json"
                         return@map ParamMeta(it.name, parameterizedType.toTypeInfo(), null, true)
                     }
@@ -141,7 +144,7 @@ object BridgeUtil {
                     ApiMeta(
                         declaredMethod,
                         resolvePath(paths),
-                        resolveHttpMethod(httpMethod),
+                        resolveHttpMethod(declaredMethod, httpMethod, hasRequestBody),
                         declaredMethod.name,
                         paramMetaList,
                         returnTypeInfo,
@@ -171,11 +174,17 @@ object BridgeUtil {
         return pathToString
     }
 
-    fun resolveHttpMethod(methods: Array<RequestMethod>): RequestMethod {
-        if (methods.isEmpty()) {
-            return RequestMethod.GET
+    fun resolveHttpMethod(
+        declaredMethod: Method,
+        methods: Array<RequestMethod>,
+        hasRequestBody: Boolean
+    ): RequestMethod {
+        val res: RequestMethod = methods.firstOrNull() ?: if (hasRequestBody) RequestMethod.POST else RequestMethod.GET
+
+        if (res == RequestMethod.GET && hasRequestBody) {
+            throw IllegalArgumentException("GET requests cannot have a request body param. Method: $declaredMethod")
         }
-        return methods[0]
+        return res
     }
 
     /**

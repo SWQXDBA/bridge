@@ -17,7 +17,7 @@ import java.util.List;
 
 
 public class PrintTest {
-//    @Test
+    @Test
     void test(){
 
 

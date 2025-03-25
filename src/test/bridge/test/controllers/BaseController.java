@@ -1,6 +1,8 @@
 package bridge.test.controllers;
 
 import io.github.swqxdba.bridge.meta.ApiComment;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.ArrayList;
@@ -26,4 +28,14 @@ public class BaseController {
     public List<DemoEnum> testEnum(){
         return new ArrayList<>();
     }
+
+    @RequestMapping("testRequestBody")
+    public List<DemoEnum> testRequestBody(@RequestBody String a ){
+        return new ArrayList<>();
+    }
+
+//    @GetMapping("gettestRequestBody")
+//    public List<DemoEnum> gettestRequestBody(@RequestBody String a ){
+//        return new ArrayList<>();
+//    }
 }
