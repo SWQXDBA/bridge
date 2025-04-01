@@ -144,7 +144,16 @@ object TypeScriptTypeConverter {
                             "Map" + "<$genericStrings>"
                         } else {
                             val split = genericStrings.split(",")
-                            "{[key:${split[0]}]:${split[1]}}"
+                            val keyType = javaType.actualTypeArguments[0]
+                            if(keyType is Class<*>){
+                                if(keyType.isEnum){
+                                    "{[key in ${split[0]}] : ${split[1]}}"
+                                }else{
+                                    "{[key : ${split[0]}] : ${split[1]}}"
+                                }
+                            }else{
+                                "{[key : ${split[0]}] : ${split[1]}}"
+                            }
                         }
                     } else {
                         return rawType.simpleName + "<$genericStrings>"

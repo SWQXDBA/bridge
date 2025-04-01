@@ -3,6 +3,7 @@ package bridge.test.controllers;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -11,6 +12,10 @@ import java.util.Map;
 @RequestMapping("test")
 public class MyController extends BaseController{
 
+    @GetMapping("enumKey")
+    Map<DemoEnum,String> enumKey(){
+        return new HashMap<>();
+    }
 
 
 
